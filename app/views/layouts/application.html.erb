@@ -7,7 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<% if current_user %>
+	<%= link_to "Sign Out", logout_path %>
+	<%= link_to "Create Post", new_post_path  %>
+	<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+  <script>
+        tinymce.init({selector:'textarea'});
+  </script>
+<% end %>
 <%= yield %>
 
 </body>
