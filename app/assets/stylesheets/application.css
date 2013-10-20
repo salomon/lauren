@@ -11,3 +11,83 @@
  *= require_self
  *= require_tree .
  */
+
+
+
+@font-face {
+	font-family: Colab;
+	src: url(/fonts/ColabThi.otf)
+}
+
+
+#left-side {
+	position: absolute;
+	float: left;
+	height: 100%;
+	width: 32%;
+	background: url(torrey_pines.png) no-repeat;
+	border-right-style: solid;
+	border-right-width: 1px;
+	top: 0px;
+	left: 0px;
+}
+
+section {
+	position: relative;
+	float: left;
+	top: 0px;
+	margin-left: 32%;
+	width: 67%;
+	display: block;
+	border-style: solid;
+	border-color: green;
+}
+
+#menu {
+	position: relative;
+	font-family: Colab, Georgia;
+	height: 28px;
+}
+
+#menu ul {
+	border-bottom-style: solid;
+	border-bottom-color: MidnightBlue;
+	border-bottom-width: 1px;
+	padding-bottom: 2%;
+	width: 100%;
+	opacity: .5;
+	padding-left: 0px;
+	margin: 0px;
+	margin-top: 50px;
+}
+
+#menu li {
+	display: inline;
+	padding-left: 5%;
+}
+
+#menu li a {
+	text-decoration: none;
+	opacity: .5;
+}
+
+#menu li a:hover{
+	opacity: 1;
+	color: black;
+}
+
+#posts {
+	position: relative;
+	width: 66%;
+	margin: 0px;
+}
+
+#padding {
+	padding: 50px;
+}
+
+
+
+
+
+

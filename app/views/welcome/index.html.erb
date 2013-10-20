@@ -1,6 +1,30 @@
-<h1>Writer Lauren</h1>
+
+<div id='left-side'>
+	<div id='button'>
+		<a href="/"></a>
+	</div>
+</div>
 
 <% if :notice %>
 <%= flash[:notice] %>
 <% end %>
 
+<section>
+	<div id='padding'>
+		<div id='menu'>
+			<ul>
+				<li><a href="#">POSTS</a></li>
+				<li><a href="#">COPYWRITING</a></li>
+				<li><a href="#">ARTICLES</a></li>
+				<li><a href="#">FICTION</a></li>
+				<li><a href="#">ABOUT</a></li>
+			</ul>
+		</div>
+
+		<% @posts.each do |post| %>
+			<div id='posts'>
+			<h1><%= post.title %></h1>
+			</div>
+		<% end %>
+	</div>
+</section>
