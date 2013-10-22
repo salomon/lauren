@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20131008025509) do
 
   create_table "posts", force: true do |t|
     t.string   "title"
+    t.string   "sub_title"
     t.text     "content"
     t.integer  "user_id"
     t.datetime "created_at"

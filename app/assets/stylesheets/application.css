@@ -19,13 +19,26 @@
 	src: url(/fonts/ColabThi.otf)
 }
 
+#new-post-link {
+	position: absolute;
+	background-color:#fe1a00;
+	height: 65px;
+	line-height: 65px;
+	border-radius: 30px;
+	width: 131px;
+	text-align: center;
+}
+
+#new-post-link a{
+	color: white;
+}
 
 #left-side {
-	position: absolute;
+	position: fixed;
 	float: left;
 	height: 100%;
 	width: 32%;
-	background: url(torrey_pines.png) no-repeat;
+	background: url(sunset2.png) no-repeat;
 	border-right-style: solid;
 	border-right-width: 1px;
 	top: 0px;
@@ -39,19 +52,19 @@ section {
 	margin-left: 32%;
 	width: 67%;
 	display: block;
-	border-style: solid;
-	border-color: green;
+	background-color: white;
 }
 
 #menu {
 	position: relative;
 	font-family: Colab, Georgia;
 	height: 28px;
+	padding-bottom: 24px;
 }
 
 #menu ul {
 	border-bottom-style: solid;
-	border-bottom-color: MidnightBlue;
+	border-bottom-color: lightgray;
 	border-bottom-width: 1px;
 	padding-bottom: 2%;
 	width: 100%;
@@ -66,28 +79,103 @@ section {
 	padding-left: 5%;
 }
 
-#menu li a {
+#menu a {
 	text-decoration: none;
-	opacity: .5;
+	opacity: .7;
+	color: black;
 }
 
-#menu li a:hover{
+#menu a:hover{
 	opacity: 1;
 	color: black;
 }
 
 #posts {
 	position: relative;
-	width: 66%;
+	width: 100%;
 	margin: 0px;
+	border-bottom-style: solid;
+	border-bottom-color: lightgray;
+	border-bottom-width: 1px;
+	padding-bottom: 30px;
+}
+
+#posts h1 {
+	margin-bottom: 16px;
+}
+
+#posts a {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 #padding {
 	padding: 50px;
 }
 
+#pic {
+	position: relative;
+	float: right;
+	bottom: 60px;
+	right: 20px;
+}
 
+#pic, img {
+	border-radius: 200px;
+}
 
+#button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+	background-color:#fe1a00;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:50px;
+	line-height:50px;
+	width:131px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #b23e35;
+	top: 200px;
+	left: 32px;
+	position: relative;
+}
 
+#button a {
+	color: white;
+}
+
+#welcome-site {
+	color: white;
+	margin-top: 50px;
+	padding-left: 40px;
+}
+
+h2 {
+	font-size: 54px;
+}
 
 

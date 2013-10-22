@@ -1,9 +1,13 @@
 
 
+
 <%= form_for(@post) do |f| %>
 	<%= f.label :title, "Title"%>
 	<%= f.text_field :title %><br>
-	<%= f.label :content, "Content"%>
-	<%= f.text_area :content, :cols => "10", :rows => "10" %>
+	<%= f.label :sub_title, "SubTitle"%>
+	<%= f.text_field :sub_title %><br>
+	<%= text_area_tag :editor, "", :class => "tinymce", :rows => 40, :cols => 120 %>
+	<%= tinymce %>
 	<%= f.submit %>
 <% end %>
+

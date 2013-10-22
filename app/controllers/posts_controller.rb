@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.where(id:params[:id]).first
   end
 
   def new
@@ -11,6 +12,10 @@ class PostsController < ApplicationController
   end
 
   def create
+    post = Post.create(title: params[:post][:title],
+                sub_title: params[:post][:sub_title],
+                content: params[:editor])
+    redirect_to post_path(post.id)
   end
 
   def destroy
