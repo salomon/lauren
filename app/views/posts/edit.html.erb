@@ -1,0 +1,12 @@
+
+<h1><%= @post.title %></h1>
+
+<%= form_for(@post) do |f| %>
+	<%= f.label :title, "Title"%>
+	<%= f.text_field :title%><br>
+	<%= f.label :sub_title, "SubTitle"%>
+	<%= f.text_field :sub_title %><br>
+	<%= text_area :editor, "", :class => "tinymce", :rows => 40, :cols => 120, :value => @post.content  %>
+	<%= tinymce %>
+	<%= f.submit %>
+<% end %>
