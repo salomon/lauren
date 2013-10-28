@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
   
   def index
+    if current_user.username == 'lauren'
+    @posts = Post.all
+    else
+    redirect_to root_path
+    end
   end
 
   def show
@@ -30,6 +35,18 @@ class PostsController < ApplicationController
     @post.update_columns(title: params[:post][:title],
                        sub_title: params[:post][:sub_title],
                        content: params[:editor])
+    redirect_to post_path(@post.id)
+  end
+
+  def publish
+    @post = Post.where(id:params[:id]).first
+    @post.publish
+    redirect_to post_path(@post.id)
+  end
+
+  def unpublish
+    @post = Post.where(id:params[:id]).first
+    @post.unpublish
     redirect_to post_path(@post.id)
   end
 

@@ -1,0 +1,7 @@
+
+
+<%= link_to "Home", root_path %><br><br>
+
+	<% @posts.each do |post| %>
+		<%= link_to post.title, edit_post_path(post.id) %><br>
+	<% end %>

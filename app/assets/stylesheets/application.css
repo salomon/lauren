@@ -13,10 +13,10 @@
  */
 
 
-
 @font-face {
-	font-family: Colab;
-	src: url(/fonts/ColabThi.otf)
+	font-family: 'DroidSansBold';
+	src: url(fonts/DroidSans-Bold-webfont.ttf)
+	format('ttf');
 }
 
 #new-post-link {
@@ -37,8 +37,9 @@
 	position: fixed;
 	float: left;
 	height: 100%;
-	width: 32%;
-	background: url(sunset2.png) no-repeat;
+	width: 300px;
+	background: url(bike.jpeg) no-repeat;
+	background-size: cover;
 	border-right-style: solid;
 	border-right-width: 1px;
 	top: 0px;
@@ -49,17 +50,16 @@ section {
 	position: relative;
 	float: left;
 	top: 0px;
-	margin-left: 32%;
-	width: 67%;
-	display: block;
-	background-color: white;
+	margin-left: 300px;
+	width: 650px;
+	z-index: -1;
 }
 
 #menu {
 	position: relative;
-	font-family: Colab, Georgia;
+	font-family: 'DroidSansBold', Georgia;
 	height: 28px;
-	padding-bottom: 24px;
+	padding-bottom: 0px;
 }
 
 #menu ul {
@@ -98,10 +98,12 @@ section {
 	border-bottom-color: lightgray;
 	border-bottom-width: 1px;
 	padding-bottom: 30px;
+	padding-top: 30px;
 }
 
 #posts h1 {
 	margin-bottom: 16px;
+	font: bold 13px "DroidSansBold", Verdana, sans-serif;
 }
 
 #posts a {
@@ -111,7 +113,7 @@ section {
 }
 
 #padding {
-	padding: 50px;
+	padding: 32px;
 }
 
 #pic {
@@ -119,35 +121,22 @@ section {
 	float: right;
 	bottom: 60px;
 	right: 20px;
+	height: 100px;
+	line-height: 100px;
 }
 
 #pic, img {
 	border-radius: 200px;
+	height: 100px;
+	line-height: 100px;
 }
 
 #button {
-	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
-	box-shadow:inset 0px 1px 0px 0px #f29c93;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
-	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
-	background-color:#fe1a00;
-	-webkit-border-top-left-radius:20px;
-	-moz-border-radius-topleft:20px;
-	border-top-left-radius:20px;
-	-webkit-border-top-right-radius:20px;
-	-moz-border-radius-topright:20px;
-	border-top-right-radius:20px;
-	-webkit-border-bottom-right-radius:20px;
-	-moz-border-radius-bottomright:20px;
-	border-bottom-right-radius:20px;
-	-webkit-border-bottom-left-radius:20px;
-	-moz-border-radius-bottomleft:20px;
-	border-bottom-left-radius:20px;
-	text-indent:0;
-	border:1px solid #d83526;
-	display:inline-block;
+	position: relative;
+	background-color: black;
+	border-radius: 16px;
+	text-indent:0px;
+	display: inline-block;
 	color:#ffffff;
 	font-family:Arial;
 	font-size:15px;
@@ -158,10 +147,8 @@ section {
 	width:131px;
 	text-decoration:none;
 	text-align:center;
-	text-shadow:1px 1px 0px #b23e35;
 	top: 200px;
-	left: 32px;
-	position: relative;
+	left: 16px;
 }
 
 #button a {
@@ -169,13 +156,18 @@ section {
 }
 
 #welcome-site {
-	color: white;
+	color: black;
 	margin-top: 50px;
 	padding-left: 40px;
+	font-family: Colab, Georgia;
 }
 
 h2 {
 	font-size: 54px;
+}
+
+a {
+	text-decoration: none;
 }
 
 

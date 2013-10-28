@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration
     	t.string :title
     	t.string :sub_title
     	t.text :content
+    	t.boolean :published, :default => false
     	t.references :user
       t.timestamps
     end

@@ -5,17 +5,18 @@
 	  <h3>Welcome to my Blog</h3>
 	</div>
 	<span id='button'>
-		<%= link_to '# Contact', post_path(1) %>
+		<%= link_to 'Contact', post_path(1) %>
 	</span>
 	<span id='button'>
-		<%= link_to '# Resume', post_path(1) %>
+		<%= link_to 'Resume', post_path(1) %>
 	</span>
 
 </div>
 
 <section>
-	<% if current_user %>
-		<span id="new-post-link"><%= link_to "Create New Post", new_post_path %></span>
+	<% if current_user.username == 'lauren' %>
+		<%= link_to "Create New Post", new_post_path %>
+		<%= link_to "See All Posts", posts_path %>
 	<% end %>
 
 
@@ -31,11 +32,13 @@
 		</div>
 
 		<% @posts.each do |post| %>
-			<div id='posts'>
-				<h1><%= link_to post.title + " " + post.updated_at.strftime("%b %d."), post_path(post.id) %></h1>
-				<span id='pic'><%= image_tag "LH6_copy.jpg" %></span>
-				<em><%= post.sub_title %></em>
-			</div>
+			<% if post.published == true %>
+				<div id='posts'>
+					<h1><%= link_to post.title + " " + post.updated_at.strftime("%b %d."), post_path(post.id) %></h1>
+					<span id='pic'><%= image_tag "LH6_copy.jpg" %></span>
+					<em><%= post.sub_title %></em>
+				</div>
+			<% end %>
 		<% end %>
 	</div>
 </section>

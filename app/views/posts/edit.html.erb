@@ -1,4 +1,4 @@
-
+<%= link_to 'Home', root_path %>
 <h1><%= @post.title %></h1>
 
 <%= form_for(@post) do |f| %>
@@ -9,4 +9,12 @@
 	<%= text_area :editor, "", :class => "tinymce", :rows => 40, :cols => 120, :value => @post.content  %>
 	<%= tinymce %>
 	<%= f.submit %>
+<% end %>
+
+<% if @post.published == false %>
+	<%= link_to 'Publish', {:action => :publish, :id => params[:id]}, :method => :put %>
+<% end %>
+
+<% if @post.published == true %>
+	<%= link_to 'Unpublish', {:action => :unpublish, :id => params[:id]}, :method => :put %>
 <% end %>
