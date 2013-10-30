@@ -8,7 +8,7 @@
 	<%= f.text_field :sub_title %><br>
 	<%= text_area :editor, "", :class => "tinymce", :rows => 40, :cols => 120, :value => @post.content  %>
 	<%= tinymce %>
-	<%= f.submit %>
+	<%= f.submit "Save" %>
 <% end %>
 
 <% if @post.published == false %>

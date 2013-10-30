@@ -1,8 +1,6 @@
 class Post < ActiveRecord::Base
 	belongs_to :user
 
-	validates :user_id, presence: true
-
 	def publish
 		if self.published == false
 			self.published = true
