@@ -14,11 +14,9 @@
 </div>
 
 <section>
-	<% if current_user %>
-		<% if current_user.username == 'lauren' %>
+	<% if current_user && current_user.username == 'lauren' %>
 			<%= link_to "Create New Post", new_post_path %>
 			<%= link_to "See All Posts", posts_path %>
-		<% end %>
 	<% end %>
 	<div id='padding'>
 		<div id='menu'>

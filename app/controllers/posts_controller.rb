@@ -1,11 +1,7 @@
 class PostsController < ApplicationController
   
   def index
-    if current_user.username == 'lauren'
     @posts = Post.all
-    else
-    redirect_to root_path
-    end
   end
 
   def show
