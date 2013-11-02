@@ -2,3 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#left-side {
+	position: fixed;
+	float: left;
+	height: 100%;
+	width: 300px;
+	background-image: url(image-path("bike.jpeg"));
+	background-size: cover;
+	border-right-style: solid;
+	border-right-width: 1px;
+	top: 0px;
+	left: 0px;
+}

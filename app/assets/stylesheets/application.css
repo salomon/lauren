@@ -33,18 +33,6 @@
 	color: white;
 }
 
-#left-side {
-	position: fixed;
-	float: left;
-	height: 100%;
-	width: 300px;
-	background-image: url("bike.jpeg");
-	background-size: cover;
-	border-right-style: solid;
-	border-right-width: 1px;
-	top: 0px;
-	left: 0px;
-}
 
 section {
 	position: relative;
