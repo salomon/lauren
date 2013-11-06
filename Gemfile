@@ -6,7 +6,7 @@ gem 'tinymce-rails'
 gem 'rails_12factor'
 # Use postgresql as the database for Active Record
 gem 'pg'
-
+gem 'nokogiri', '~> 1.6.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc2'
 

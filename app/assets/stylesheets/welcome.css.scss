@@ -14,3 +14,28 @@
 	top: 0px;
 	left: 0px;
 }
+
+#lauren-date {
+	color: gray;
+	padding-left: 10px;
+}
+
+.sub {
+	width: 400px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	height: 105px;
+	text-overflow: ellipsis;
+}
+
+#title {
+	font-size: 32px;
+}
+
+p {
+	margin-bottom: 0px;
+}
+
+

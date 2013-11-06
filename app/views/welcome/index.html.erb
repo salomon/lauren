@@ -10,7 +10,6 @@
 	<span id='button'>
 		<%= link_to 'Resume', post_path(1) %>
 	</span>
-
 </div>
 
 <section>
@@ -21,7 +20,7 @@
 	<div id='padding'>
 		<div id='menu'>
 			<ul>
-				<li><a href="#">POSTS</a></li>
+				<li><%= link_to "POSTS", posts_path %></li>
 				<li><a href="#">COPYWRITING</a></li>
 				<li><a href="#">ARTICLES</a></li>
 				<li><a href="#">FICTION</a></li>
@@ -32,9 +31,10 @@
 		<% @posts.each do |post| %>
 			<% if post.published == true %>
 				<div id='posts'>
-					<h1><%= link_to post.title + " " + post.updated_at.strftime("%b %d."), post_path(post.id) %></h1>
+					<span id='title'><%= link_to post.title, post_path(post.id)%></span>
+					<span id='lauren-date'><%= post.updated_at.strftime("%B %Y") %></span>
 					<span id='pic'><%= image_tag "LH6_copy.jpg" %></span>
-					<em><%= post.sub_title %></em>
+					<div class="sub"><%= raw post.content.strip %></div>
 				</div>
 			<% end %>
 		<% end %>
