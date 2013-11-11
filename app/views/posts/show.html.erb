@@ -1,9 +1,13 @@
-
-
-<% if current_user %>
-	<%= link_to "Edit Post", edit_post_path(@post.id) %>
-<% end %>
-<h1><%= @post.title %></h1>
-
-<%= raw @post.content %> 
-<%= @post.created_at.strftime("%b %d.") %>
+<div class='padding'>
+	<%= render "layouts/menu" %>
+		
+	<% if current_user && current_user.writer == true %>
+		<%= link_to "Edit Post", edit_post_path(@post.id) %>
+	<% end %>
+	<% picture = "jeans.jpeg" %>
+	<div id="post-content">
+		<h1><%= @post.title %></h1>
+		<aside id='pic-post'><%= image_tag picture %></aside>
+		<span id="content"><%= raw @post.content %></span> 
+	</div>
+</div>

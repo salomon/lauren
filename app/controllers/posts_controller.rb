@@ -9,7 +9,11 @@ class PostsController < ApplicationController
   end
 
   def new
-  	@post = Post.new
+    if current_user && current_user.writer == true
+      @post = Post.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
@@ -23,12 +27,16 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.where(id:params[:id]).first
+    if current_user && current_user.writer == true
+      @post = Post.where(id:params[:id]).first
+    else
+      redirect_to root_path
+    end
   end
 
   def update
     @post = Post.where(id:params[:id]).first
-    @post.update_columns(title: params[:post][:title],
+    @post.update_attributes(title: params[:post][:title],
                        sub_title: params[:post][:sub_title],
                        content: params[:editor])
     redirect_to post_path(@post.id)

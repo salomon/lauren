@@ -1,42 +1,29 @@
 
-<div id='left-side'>
-	<div id='welcome-site'>
-	  <h2>Writer Lauren</h2>
-	  <h3>Welcome to my Blog</h3>
-	</div>
-	<span id='button'>
-		<%= link_to 'Contact', post_path(1) %>
-	</span>
-	<span id='button'>
-		<%= link_to 'Resume', post_path(1) %>
-	</span>
-</div>
 
-<section>
-	<% if current_user && current_user.username == 'lauren' %>
-			<%= link_to "Create New Post", new_post_path %>
-			<%= link_to "See All Posts", posts_path %>
-	<% end %>
-	<div id='padding'>
-		<div id='menu'>
-			<ul>
-				<li><%= link_to "POSTS", posts_path %></li>
-				<li><a href="#">COPYWRITING</a></li>
-				<li><a href="#">ARTICLES</a></li>
-				<li><a href="#">FICTION</a></li>
-				<li><a href="#">ABOUT</a></li>
-			</ul>
-		</div>
 
-		<% @posts.each do |post| %>
-			<% if post.published == true %>
-				<div id='posts'>
-					<span id='title'><%= link_to post.title, post_path(post.id)%></span>
-					<span id='lauren-date'><%= post.updated_at.strftime("%B %Y") %></span>
-					<span id='pic'><%= image_tag "LH6_copy.jpg" %></span>
-					<div class="sub"><%= raw post.content.strip %></div>
-				</div>
-			<% end %>
+<% if current_user && current_user.writer == true %>
+		<%= link_to "Create New Post", new_post_path %>
+		<%= link_to "See All Posts", posts_path %>
+<% end %>
+
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %>
+
+<% if current_user %>
+	<%= image_tag current_user.image  %>
+<% end %>
+
+<div class='padding'>
+	<%= render "layouts/menu" %>
+	<% @posts.each do |post| %>
+		<% if post.published == true %>
+			<div id='posts'>
+				<span id='title'><%= link_to post.title, post_path(post.id)%></span>
+				<span id='lauren-date'><%= post.updated_at.strftime("%B %Y") %></span>
+				<span id='pic'><%= image_tag "LH6_copy.jpg" %></span>
+				<div class="sub"><%= raw post.content.strip %></div>
+			</div>
 		<% end %>
-	</div>
-</section>
+	<% end %>
+</div>

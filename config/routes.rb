@@ -8,6 +8,8 @@ LaurenBlog::Application.routes.draw do
   resources :posts
   put '/publish/:id' => 'posts#publish', :as => 'publish'
   put '/unpublish/:id' =>  'posts#unpublish', :as => 'unpublish'
+  get 'auth/:provider/callback' => 'sessions#create'
+  get '/auth/failure' => 'sessions#failure'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

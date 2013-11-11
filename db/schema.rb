@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20131008025509) do
 
   create_table "posts", force: true do |t|
     t.string   "title"
-    t.string   "sub_title"
     t.text     "content"
     t.boolean  "published",  default: false
     t.integer  "user_id"
@@ -35,6 +34,13 @@ ActiveRecord::Schema.define(version: 20131008025509) do
   create_table "users", force: true do |t|
     t.string   "username"
     t.string   "password_digest"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.string   "image"
+    t.boolean  "writer",           default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

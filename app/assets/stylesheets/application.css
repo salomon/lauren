@@ -12,6 +12,10 @@
  *= require_tree .
  */
 
+body {
+	margin: 0;
+	padding: 0;
+}
 
 @font-face {
 	font-family: 'DroidSansBold';
@@ -40,7 +44,7 @@ section {
 	top: 0px;
 	margin-left: 300px;
 	width: 650px;
-	z-index: -1;
+	z-index: -10;
 }
 
 #menu {
@@ -101,7 +105,7 @@ section {
 	font-weight: bold;
 }
 
-#padding {
+.padding {
 	padding: 10px 50px 50px 50px;
 }
 
@@ -112,7 +116,7 @@ section {
 	line-height: 100px;
 }
 
-#pic, img {
+#pic img {
 	border-radius: 200px;
 	height: 100px;
 	line-height: 100px;
@@ -149,12 +153,40 @@ section {
 	font-family: Colab, Georgia;
 }
 
-h2 {
+
+
+h2 a{
 	font-size: 54px;
+	color: black;
 }
 
 a {
 	text-decoration: none;
+}
+
+#show-post {
+	padding: 80px;
+}
+
+#post-padding h1 {
+	text-align: center;
+}
+
+#pic-post img {
+	float: left;
+	height: 200px;
+	width: 40%;
+	margin-right: 10px;
+}
+
+#pic-post {
+	top: 100px;
+}
+
+#post-padding {
+	background-color: darkpink;
+	height: 100%;
+	width: 100%;
 }
 
 
