@@ -1,13 +1,36 @@
+
+<% picture = "jeans.jpeg" %>
+
+<% content_for :head do %>
+	<%= tag :meta, property: "fb:app_id", content: ENV["FACEBOOK_APP_ID"] %>
+	<%= tag :meta, property: "og:title", content: @post.title %>
+	<%= tag :meta, property: "og:site_name", content: "Writer Lauren" %>
+	<%= tag :meta, property: "og:url", content: post_url(@post) %>
+<% end %>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=545833562159112";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 <div class='padding'>
 	<%= render "layouts/menu" %>
 		
 	<% if current_user && current_user.writer == true %>
 		<%= link_to "Edit Post", edit_post_path(@post.id) %>
 	<% end %>
-	<% picture = "jeans.jpeg" %>
 	<div id="post-content">
 		<h1><%= @post.title %></h1>
 		<aside id='pic-post'><%= image_tag picture %></aside>
 		<span id="content"><%= raw @post.content %></span> 
 	</div>
+	<% site_url = "https://24f840cf.ngrok.com/posts/#{@post.id}" %>
+	<div class="fb-share-button" data-href= <%= site_url %> data-width="200" data-type="button"></div>
 </div>
+
