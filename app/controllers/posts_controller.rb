@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.where(id:params[:id]).first
+    @posting = @post.id
   end
 
   def new
