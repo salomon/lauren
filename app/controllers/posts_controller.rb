@@ -5,8 +5,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
     @post = Post.where(id:params[:id]).first
-    @posting = @post.id
   end
 
   def new

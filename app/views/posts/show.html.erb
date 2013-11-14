@@ -34,3 +34,30 @@
 	<div class="fb-share-button" data-href= <%= site_url %> data-width="200" data-type="button"></div>
 </div>
 
+
+<div class="comments-section">
+	<ul>
+		<% @post.comments.each do |comment| %>
+			<li>
+				<div class="comment">
+					<span><%= comment.name %></span>
+					<span class="comment-date"><%= " posted on " + comment.updated_at.strftime("%B %d") %></span><br>
+					<span><%= comment.content %></span>
+				</div>
+			</li>
+		<% end %>
+	</ul>
+</div>
+
+
+<div class="leave-comment">
+	<h2>Leave a Comment</h2>
+	<%= form_for [@post, @comment] do |f| %>
+	    <%= f.text_field :name, placeholder: "Name" %><br>
+	    <%= f.text_field :email, placeholder: "Email" %><br>
+	    <%= f.text_area :content, placeholder: "Comment", :rows => 10, :cols => 75 %><br>
+	    <%= f.submit("Submit") %>
+	<% end %>
+</div>
+
+
