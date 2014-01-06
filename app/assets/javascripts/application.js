@@ -17,5 +17,6 @@
 
 $("#pic-post").on( "click", function() {
   _kmq.push(['record', 'Hit Picture']);
+  console.log("umm yea, it worked");
 });
 
