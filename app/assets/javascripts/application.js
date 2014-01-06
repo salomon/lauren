@@ -19,7 +19,12 @@
 
 $( document ).ready(function() {
   $("#pic-post").on( "click", function() {
-  _kmq.push(['record', 'Hit Picture']);
+  _kmq.push(['record', 'Hit Picture', {'Picture': 'title'}]);
   console.log("umm yea, it worked");
 	});
 });
+
+
+
+
+
