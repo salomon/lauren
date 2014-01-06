@@ -15,4 +15,7 @@
 //= require_tree .
 //= require tinymce-jquery
 
-var johnny = "johnny";
+$("#pic-post").on( "click", function() {
+  _kmq.push(['record', 'Hit Picture']);
+});
+
