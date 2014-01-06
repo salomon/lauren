@@ -21,7 +21,7 @@
 			<div id='posts'>
 				<span id='title'><%= link_to post.title, post_path(post.id)%></span>
 				<span id='lauren-date'><%= post.updated_at.strftime("%B %Y") %></span>
-				<span id='pic'><%= image_tag "LH6_copy.jpg" %></span>
+				<span id='pic'><%= image_tag "LH6.jpg" %></span>
 				<div class="sub"><%= raw post.content.strip %></div>
 			</div>
 		<% end %>

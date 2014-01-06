@@ -15,3 +15,4 @@
 //= require_tree .
 //= require tinymce-jquery
 
+var johnny = "johnny";
