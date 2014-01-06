@@ -15,8 +15,11 @@
 //= require_tree .
 //= require tinymce-jquery
 
-$("#pic-post").on( "click", function() {
+
+
+$( document ).ready(function() {
+  $("#pic-post").on( "click", function() {
   _kmq.push(['record', 'Hit Picture']);
   console.log("umm yea, it worked");
+	});
 });
-
