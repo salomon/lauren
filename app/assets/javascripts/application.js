@@ -24,7 +24,9 @@ $( document ).ready(function() {
 	});
 });
 
-
+document.getElementById('pic-post').onclick = function(e){
+  alert('click');
+}
 
 
 
