@@ -8,12 +8,12 @@
 	<%= tag :meta, property: "og:url", content: post_url(@post) %>
 
 <script type="text/javascript">
-$( document ).ready(function() {
-  $("#pic-post").on( "click", function() {
-  _kmq.push(['record', 'Hit Picture', {'Picture': 'title'}]);
-  console.log("umm yea, it worked");
-	});
-});
+var postTitle = $('h1').text();
+_kmq.push(['trackClick', '#pic-post', 'Hit Picture', {'Picture' : postTitle}]);
+_kmq.push(['set', {'gender':'male'}]);
+_kmq.push(['identify', 'Ryan']);
+
+
 </script>
 <% end %>
 
