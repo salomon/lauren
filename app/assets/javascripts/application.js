@@ -17,16 +17,8 @@
 
 
 
-$( document ).ready(function() {
-  $("#pic-post").on( "click", function() {
-  _kmq.push(['record', 'Hit Picture', {'Picture': 'title'}]);
-  console.log("umm yea, it worked");
-	});
-});
 
-document.getElementById('pic-post').onclick = function(e){
-  alert('click');
-}
+
 
 
 
