@@ -56,7 +56,7 @@ section {
 
 #menu ul {
 	border-bottom-style: solid;
-	border-bottom-color: lightgray;
+	border-bottom-color: red;
 	border-bottom-width: 1px;
 	padding-bottom: 2%;
 	width: 100%;
@@ -189,4 +189,18 @@ a {
 	width: 100%;
 }
 
+#left-side {
+	position: fixed;
+	float: left;
+	height: 100%;
+	width: 300px;
+	background-image: url(image-path("bike.jpeg"));
+	background-color: blue;
+	background-size: cover;
+	border-right-style: solid;
+	border-right-width: 1px;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+}
 
