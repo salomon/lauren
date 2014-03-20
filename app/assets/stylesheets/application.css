@@ -182,19 +182,3 @@ a {
 	height: 100%;
 	width: 100%;
 }
-
-#left-side {
-	position: fixed;
-	float: left;
-	height: 100%;
-	width: 300px;
-	background-image: url(image-path("bike.jpeg"));
-	background-color: blue;
-	background-size: cover;
-	border-right-style: solid;
-	border-right-width: 1px;
-	top: 0px;
-	left: 0px;
-	z-index: 10;
-}
-
