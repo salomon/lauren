@@ -17,12 +17,6 @@ body {
 	padding: 0;
 }
 
-@font-face {
-	font-family: 'DroidSansBold';
-	src: url(fonts/DroidSans-Bold.ttf)
-	format('ttf');
-}
-
 #new-post-link {
 	position: absolute;
 	background-color:#fe1a00;
