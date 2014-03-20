@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc2'
+gem 'rails', '4.0.4'
 gem 'tinymce-rails'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'omniauth-facebook'
 gem 'foreman'
 gem 'koala', '~> 1.8.0rc1'
@@ -11,7 +11,7 @@ gem 'koala', '~> 1.8.0rc1'
 gem 'pg'
 gem 'nokogiri', '~> 1.6.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0.rc2'
+gem 'sass-rails', '~> 4.0.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
